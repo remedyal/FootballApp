@@ -1,0 +1,38 @@
+--------------------------------------
+Saran dari Submission 3
+---------------------------------------
+
+1.
+Penggunaan Kotlin versi terupdate (1.3).
+
+2.
+Penambahan Locale pada SimpleDateFormat.
+
+3.
+Gunakan fitur Refactor - Remove Unused Resources dan Analyze - Code Cleanup
+
+4.
+Hindari penggunaan var pada variabel yang tidak pernah diubah.
+
+5.
+Hindari penggunaan semicolon pada akhir kode.
+
+
+---------------------------------------
+Perkembangan pada Submission 4
+---------------------------------------
+
+1.
+Kotlin sudah diupdate ke '1.3.10'. Perubahan versi tersebut berpengaruh pada Anko, sehingga diupdate juga ke '0.10.8'.
+ 
+2.
+Locale sudah diterapkan, menggunakan wilayah Indonesia "in".
+
+3.
+Sudah digunakan, namun untuk "id" tidak saya cek dan refactor, karena terkadang yang terdaftar ternyata masih digunakan.
+
+4 dan 5.
+Sudah saya cek kembali, dan sepertinya kini sudah clear.
+
+
+Terima kasih atas review & sarannya.

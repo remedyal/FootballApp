@@ -1,0 +1,74 @@
+---------------------------------------
+Catatan revisi Submission 3
+---------------------------------------
+1.
+[*] Problem :
+Menyimpan jadwal pertandingan ke halaman Favorite (Force Close dalam kondisi tertentu).
+
+[*] Penyebab :
+Variabel "item" belum terinisialisasi saat menambahkan data ke favorite.
+UninitializedPropertyAccessException tidak tertangani.
+
+[*] Saran Reviewer :
+Mekanisme pencegahan terhadap penekanan tombol favorite sebelum this::item.isInitialized.
+Contoh: Menahan tampilan tombol favorite sebelum "item" ternisialisasi.
+
+[*] Tindak Lanjut / Perbaikan :
+Kondisi this::item.isInitialized telah diimplementasikan pada function addToFavorite().
+
+Apabila !this::item.isInitialized, function akan melempar UninitializedPropertyAccessException yang akan ditangani
+dengan penampilan pesan error dan meminta user mengulangi action setelah beberapa saat.
+
+Agar function setFavorite() tidak dieksekusi ketika Exception muncul, ada perubahan struktur penanganan Exception pada
+function addToFavorite() dan removeFromFavorite(). yakni menjadi di luar function dan berada pada satu lokasi yang sama.
+
+
+--------------------------------------
+Saran dari Submission 2
+---------------------------------------
+
+1.
+Penggunaan https://www.thesportsdb.com/api/v1/json/1/lookupevent.php?id=EVENT_ID pada EventDetailActivity.
+
+2.
+Variable yang tidak pernah dimodifikasi, sebaiknya dideklarasikan menggunakan val.
+
+3.
+Hindari penggunaan double bang operator (!!) saat pengecekan null.
+
+
+---------------------------------------
+Perkembangan pada Submission 3
+---------------------------------------
+
+1.
+Proses pengiriman data antar Activity dan request pada EventDetailActivity sudah diperbaiki menjadi hanya
+memakai id event(sebelumnya menggunakan Bundle).
+Team name (untuk request Team Detail) didapatkan melalui request pertama menggunakan id event tersebut.
+
+2.
+Saya cek sudah tidak ada, namun jika ditemukan, mohon ditunjukkan lokasi spesifik variabel tersebut.
+
+3.
+Saya cek sudah tidak ada, namun jika ditemukan, mohon ditunjukkan lokasi spesifik penggunaan operator tersebut.
+
+
+---------------------------------------
+Catatan tambahan terkait Submission 3
+---------------------------------------
+
+1.
+Terkait syarat "Semua fitur pada aplikasi sebelumnya harus tetap dipertahankan".
+Sebelumnya saya menggunakan ViewPager dan TabLayout untuk prev dan next match. Kedua komponen tersebut saya remove dulu
+pada submission ini, karena sudah digantikan oleh BottomNavigationView. Jika di submission berikutnya dibutuhkan,
+keduanya akan saya pasang kembali.
+
+
+2.
+Data formasi (strHomeFormation dan strAwayFormation) dari API saat ini selalu kosong, baik pada prev maupun next match.
+Hal ini berakibat pada tampilan Event Detail yang tidak memunculkan nilai formasi tersebut, sehingga tidak sepenuhnya
+sesuai dengan contoh gif yang diberikan pada modul submission. Elemen penampungnya (TextView) sudah disediakan.
+
+
+
+Terima kasih atas review & sarannya.

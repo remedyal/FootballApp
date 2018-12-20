@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="rv_events" type="id"/>
+    <item name="rv_teams" type="id"/>
+    <item name="rv_players" type="id"/>
+    <item name="spinner_leagues" type="id"/>
+</resources>
